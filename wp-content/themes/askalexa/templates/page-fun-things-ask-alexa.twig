@@ -1,0 +1,47 @@
+{# 
+ * This file is part of the WP Theme and Portfolio of derek shirk
+ * <https://derekshirk.com>
+ * (c) derek shirk
+ * [license] Don't be a jerk. Otherwise, learn, share, profit and so on. 
+
+/* ---------------------------------------------------------- */
+/*  Portfolio / Projects Page View
+/* ---------------------------------------------------------- */ #}
+
+{% extends "base.twig" %}
+
+{% block content %}
+	
+	<div class="commands-ui">
+		{% for post in posts %}
+			{% include ['tz-'~post.post_type~'.twig', 'tease.twig'] %}
+		{% endfor %}
+	</div>
+
+	<section class="site-info">
+		<div class="wrapper">
+			<div class="text--column">
+				<h3>{{ posts|length }} fun things to ask Alexa.</h3>
+
+				<p>I have collected a large archive of Easter Eggs, fun questions and commands to ask your <a href="http://amzn.to/2ovDAsn">Amazon Echo</a> or <a href="http://amzn.to/2ovKkXa">Echo Dot</a>. There is a popular Reddit thread that contains many of these alexa voice commands. Thanks to everyone who contributed to that thread. </p>
+
+				<p>I wanted to create a fun side project that presented those and other fun things to ask alexa, that was visually pleasing and easy to swipe through and fun to use. </p>
+			</div>
+
+			<div class="sidebar">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- Fun things to ask Alexa -->
+					<ins class="adsbygoogle"
+					style="display:block"
+					data-ad-client="ca-pub-3326704200950264"
+					data-ad-slot="2139156034"
+					data-ad-format="auto"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			
+		</div>
+	</section>
+	
+{% endblock %}

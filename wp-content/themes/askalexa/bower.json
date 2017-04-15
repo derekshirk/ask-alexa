@@ -1,0 +1,31 @@
+{
+  "name": "askalexa",
+  "authors": [
+    "derekshirk <derekshirk@gmail.com>"
+  ],
+  "description": "funthingstoaskalexa.com",
+  "main": "main.js",
+  "keywords": [
+    "timber",
+    "WordPress"
+  ],
+  "license": "MIT",
+  "homepage": "funthingstoaskalexa.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "normalize-css": "^6.0.0",
+    "reset-scss": "^2.0.2",
+    "slick-carousel": "^1.6.0"
+  },
+  "devDependencies": {
+    "neat": "^2.0.0"
+  }
+}

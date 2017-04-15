@@ -1,0 +1,33 @@
+// codepen.io/jakob-e/pen/woGXWe.scss
+@include google-font {
+	// @include google-font( Roboto, 300 400 500 700 900) ;  
+	// @include google-font( Montserrat, 300 400 500 500i 700) ;
+	// @include google-font( Source Sans Pro, 300 400 600 700 900) ;
+	// @include google-font( Bitter, 400 700 ) ;
+	// @include google-font( Lora, 400 700 ) ;
+	@include google-font( Droid Serif, 400 700 ) ;
+	@include google-font( Merriweather, 300 400 700 900) ;
+	@include google-font( Noto Serif, 400 700) ;
+
+	// @include google-font( Poppins, 300 400 500 600 700 ) ;
+	@include google-font(Open Sans, 300 400 600 700);    
+	// @include google-font( Material Icons ) ;
+
+	// @include google-font(Raleway, 300 400 500 600 700 900);
+	// @include google-font(Ubuntu, 300 400 500 700 );
+	@include google-font(Lato, 300 400 700);    
+	// @include google-font(Open Sans, 300 600);    
+	// @include google-font(Oswald, 300 400 700);
+}
+
+// Sans-Serif
+$sans-serif-stack: "Helvetica Neue, Helvetica, Arial, sans-serif" ;
+$lato: 'Lato',  $sans-serif-stack ;
+$open-sans: "Open Sans", $sans-serif-stack ;
+$lato: "Lato", $sans-serif-stack ;
+
+
+// Serif 
+$droid-serif: 'Droid Serif', serif ;
+$merriweather: 'Merriweather', serif ;
+$noto-serif: "Noto Serif", serif ;

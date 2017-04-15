@@ -1,0 +1,20 @@
+.nav-main {
+	ul {
+		display: flex ;
+		.menu-item {
+			padding: 0 12px ;
+			a {
+				color: #fff ;
+				text-decoration: none ;
+				// font-family: $noto-serif ;
+				// font-weight: 700 ;
+				font-family: $lato ;
+			}
+		}
+		.submit {
+			border: 2px solid #fff ;
+			border-radius: 36px ;
+			padding: 8px 24px ;
+		}
+	}
+}

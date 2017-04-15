@@ -1,0 +1,28 @@
+{
+  "name": "askalexa",
+  "version": "1.0.0",
+  "description": "fun things to ask alexa",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "tundercats go"
+  },
+  "keywords": [
+    "WordPress",
+    "Timber"
+  ],
+  "author": "derek shirk <derekshirk@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "jshint": "^2.9.4"
+  }
+}

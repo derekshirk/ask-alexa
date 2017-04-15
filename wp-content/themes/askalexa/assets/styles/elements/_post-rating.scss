@@ -1,0 +1,79 @@
+.post--rating {
+	display: flex ;
+	margin-top: 64px ;
+	justify-content: flex-start ;
+	align-items: center ;
+
+	.rate {
+		display: flex ;
+		align-items: center ;
+		justify-content: center ;
+		width: 56px ;
+		height: 56px ;
+		margin: 0 12px ;
+		padding: 12px ;
+		border: 3px solid lighten($light-blue, 5%) ;
+		transition: border-color ease .43s ;
+		border-radius: 100% ;
+
+		svg {
+			width: 100% ;
+			path {
+				fill: lighten($light-blue, 5%) ;
+				transition: fill ease .43s ;
+			}
+		}
+
+		&:hover, 
+		&.voted {
+			cursor: pointer ;
+			border-color: #fff ;
+			transition: border-color ease .43s ;
+			svg path {
+				transition: fill ease .43s ;
+				fill: #fff ;
+			}
+		}
+	}
+
+	.thumbs-up {
+		svg {
+			position: relative ;
+			bottom: 1px ;
+		}
+	}
+
+	.thumbs-down {
+		svg {
+			position: relative ;
+			top: 2px ;
+			transform: rotate(180deg) ;
+		}
+	}
+}
+
+
+// .post-like{
+//     margin-top:1em
+// }
+ 
+// .like{
+//     background:url(assets/svg/icon-thumbs-up.svg) no-repeat;
+//     width: 15px;
+//     height: 16px;
+//     display: block;
+//     float:left;
+//     margin-right: 4px;
+//     -moz-transition: all 0.2s ease-out 0.1s;
+//     -webkit-transition: all 0.2s ease-out 0.1s;
+//     -o-transition: all 0.2s ease-out 0.1s
+// }
+ 
+// .post-like a:hover .like{
+//     // background-position:-16px 0;
+// }
+ 
+// .voted .like, .post-like.alreadyvoted{
+//     // background-position:-32px 0;
+//     content: "i voted" ;
+// }
