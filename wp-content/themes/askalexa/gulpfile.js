@@ -23,8 +23,7 @@ gulp.task('serve', ['sass'], function() {
 		target: 'funthingstoaskalexa.dev'
 	});
 	 
-	 gulp.watch("assets/styles/**/*.scss", ['sass'] );
-	// gulp.watch("assets/styles/**/*.scss", ['sass'] ).on('change', browserSync.reload);
+	gulp.watch("assets/styles/**/*.scss", ['sass'] );
 	gulp.watch("assets/scripts/**/*.js", ['scripts'] ).on('change', browserSync.reload);
 	gulp.watch("templates/*.twig").on('change', browserSync.reload) ;
 });
@@ -40,7 +39,6 @@ gulp.task('lint', function() {
 // Compile Our Sass
 gulp.task('sass', function() {
 	return gulp.src('assets/styles/*.scss')
-	// .pipe(sass())
 	.pipe(sass({
 		outputStyle: 'compressed',
 		includePaths: [

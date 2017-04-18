@@ -1,0 +1,26 @@
+.error404 {
+	.content-wrapper {
+		display: flex ;
+		align-items: center ;
+		justify-content: center ;
+		height: calc(100% - 80px) ;
+		.wrapper  {
+			width: 570px ;
+			
+			h1 {
+				font-family: $open-sans ;
+				font-size: 280px ;
+				font-weight: 900 ;
+				color: #fff ;
+				margin-bottom: 16px ;
+			}
+
+			h2 {
+				font-family: $noto-serif ;
+				font-size: 40px ;
+				line-height: 50px ;
+				color: #fff ;
+			}
+		}
+	}
+}
