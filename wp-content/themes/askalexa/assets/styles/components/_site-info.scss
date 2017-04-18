@@ -77,9 +77,10 @@
 		}
 
 		.sidebar {
-			// background-color: orange ;
+			background-color: orange ;
 			height: 300px ;
-			@include grid-column(4 of 12) ;
+			overflow: hidden ;
+			
 			// @include grid-shift(2) ;
 			// @include grid-shift(.65) ;
 			@include grid-media($grid-medium) {
@@ -87,7 +88,10 @@
 				margin-top: 32px ;
 				// background: orange ;
 			}
-			overflow: hidden ;
+			@include grid-media($grid-large) {
+				@include grid-column(4 of 12) ;
+			}
+			
 		}
 	}
 }
