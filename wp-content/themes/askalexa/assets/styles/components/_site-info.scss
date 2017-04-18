@@ -17,8 +17,9 @@
 	.wrapper {
 		@include grid-container;
 		height: 100% ;
-		margin: 0 auto ;
-		padding: 64px 0 ;
+		// margin: 0 auto ;
+		padding: 64px 30px ;
+		
 		// display: flex ;
 		// align-items: flex-start ;
 		// justify-content: space-between ;
@@ -29,11 +30,16 @@
 		}
 
 		h3 {
-			font-size: 32px ;
+			font-size: 40px ;
+			line-height: 48px ;
 			font-family: $noto-serif ;
-			line-height: 34px ;
 			margin-bottom: 12px ;
 			font-weight: 700 ;
+
+			@include grid-media($grid-medium) {
+				font-size: 32px ;
+				line-height: 34px ;
+			}
 		}
 
 		p {
@@ -51,13 +57,14 @@
 		}
 
 		.text--column {
-			@include grid-column(12) ;
-			margin-right: 30px ;
+			width: 100% ;
+			// margin-right: 30px ;
+
 
 			@include grid-media($grid-medium) {
-				@include grid-column(5 of 8) ;	
-				margin-right: 0 ;
 
+				@include grid-column(8 of 8) ;	
+				// margin-right: 0 ;
 			}
 
 			@include grid-media($grid-large) {
@@ -76,7 +83,8 @@
 			// @include grid-shift(2) ;
 			// @include grid-shift(.65) ;
 			@include grid-media($grid-medium) {
-				@include grid-column(3 of 8) ;
+				@include grid-column(8 of 8) ;
+				margin-top: 32px ;
 				// background: orange ;
 			}
 			overflow: hidden ;

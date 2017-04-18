@@ -33,9 +33,9 @@
 		margin-right: 30px ;
 
 		@include grid-media($grid-medium) {
-			margin: 0 auto ;
-			@include grid-column(10) ;
-			@include grid-push(1) ;
+			// margin: 0 auto ;
+			@include grid-column(6 of 8) ;
+			// @include grid-push(1) ;
 		}
 	}
 
