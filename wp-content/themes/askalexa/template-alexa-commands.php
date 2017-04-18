@@ -21,4 +21,4 @@ $context['count'] = wp_count_posts();
 // $love = get_post_meta( get_the_ID(), 'post_love', true );
 // $love = ( empty( $love ) ) ? 0 : $love;
 
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render( array( 'page-front.twig', 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
