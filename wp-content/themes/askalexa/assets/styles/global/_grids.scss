@@ -1,0 +1,33 @@
+$neat-grid: (
+	columns: 4,
+	gutter: 30px
+);
+
+$grid-small: (
+	// media: 'screen and (max-width: 39.9375em)',
+	columns: 12,
+	gutter: 30px
+);
+
+$grid-medium: (
+	// media: 'screen and (min-width: 40em)',
+	media: 415px,
+	columns: 8,
+	gutter: 30px,
+	color: skyblue
+);
+
+$grid-large: (
+	// media: 'screen and (min-width: 64em)',
+	media: 769px,
+	columns: 12,
+	gutter: 30px,
+	color: skyblue
+);
+
+$grid-xlarge: (
+	media: 1281px,
+	columns: 12, 
+	gutter: 30px,
+	color: skyblue
+);

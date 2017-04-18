@@ -1,8 +1,6 @@
 .header {
 	height: $header-height ;
-	// background-color: darken( $dark-blue, 2% );
 	background-color: lighten($light-blue, 2%) ;
-	background-color: rgba($light-blue, .6) ;
 
 	.wrapper {
 		height: 100% ;

@@ -12,9 +12,14 @@
 			}
 		}
 		.submit {
+			display: none ;
 			border: 2px solid #fff ;
 			border-radius: 36px ;
 			padding: 8px 24px ;
+
+			@include grid-media($grid-medium) {
+				display: inline-block ;
+			}
 		}
 	}
 }

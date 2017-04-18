@@ -1,0 +1,75 @@
+.commands-ui {
+	visibility: hidden ;
+	display: flex ;
+	width: auto ;
+	align-items: center ;
+	justify-content: center ;
+	height: 82vh ;
+	background-color: #1565C0 ;
+	// @include grid-visual ;
+	// @include grid-container;
+
+	.slick-list, .slick-track {
+		height: 100% ;
+	}
+	.tease-alexa-commands {
+		// padding: 20px ;
+		
+		@include grid-container;
+		
+	}
+
+	.alexa-command {
+		// @include grid-visual() ;
+		// @include grid-column(7);
+		// background-color: yellow ;
+		height: auto ;
+		
+		font-family: $noto-serif ;
+		width: 100% ;
+		// width: 770px ;
+		
+		@include grid-column(12) ;
+		margin-right: 30px ;
+
+		@include grid-media($grid-medium) {
+			margin: 0 auto ;
+			@include grid-column(10) ;
+			@include grid-push(1) ;
+		}
+	}
+
+	h2 {
+		width: 100% ;
+		padding: 0 ;
+		margin: 0 ;
+		
+		color: #fff ;
+		margin-bottom: 16px ;
+		font-weight: 900 ;
+		
+		font-size: 48px ;
+		
+		@include grid-media($grid-medium) {
+			font-size: 64px ;	
+		}
+		
+	}
+
+	h3 {
+		width: 100% ;
+		padding: 0 ;
+		margin: 0 ;
+		font-size: 42px ;
+		line-height: 52px ;
+		font-weight: 300 ;
+		
+		color: rgba(250, 250, 250, 0.9) ;
+
+
+		@include grid-media($grid-medium) {
+			font-size: 54px ;
+			line-height: 64px ;
+		}
+	}
+}
