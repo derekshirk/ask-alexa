@@ -58,26 +58,20 @@
 
 		.text--column {
 			width: 100% ;
-			// margin-right: 30px ;
-
 
 			@include grid-media($grid-medium) {
-
 				@include grid-column(8 of 8) ;	
-				// margin-right: 0 ;
 			}
 
 			@include grid-media($grid-large) {
 				@include grid-column(6 of 12) ;	
-				// @include grid-shift(2) ;
 				@include grid-push(1) ;
-				// background: #eaeaea ;
 			}
-			
 		}
 
 		.sidebar {
-			background-color: orange ;
+			// background-color: orange ;
+			margin-top: 32px ;
 			height: 300px ;
 			overflow: hidden ;
 			
@@ -85,11 +79,12 @@
 			// @include grid-shift(.65) ;
 			@include grid-media($grid-medium) {
 				@include grid-column(8 of 8) ;
-				margin-top: 32px ;
+				
 				// background: orange ;
 			}
 			@include grid-media($grid-large) {
 				@include grid-column(4 of 12) ;
+				margin-top: 0 ;
 			}
 			
 		}
