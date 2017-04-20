@@ -33,10 +33,9 @@ class ACP_ListScreen_MSSite extends AC_ListScreen {
 	}
 
 	/**
-	 * @since 2.0
-	 * @return string Link
+	 * @return string
 	 */
-	public function get_screen_link() {
+	protected function get_admin_url() {
 		return network_admin_url( 'sites.php' );
 	}
 

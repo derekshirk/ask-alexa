@@ -432,7 +432,7 @@ class ACP_Editing_TableScreen {
 				} else {
 					$options[] = array(
 						'value' => $index,
-						'label' => $option,
+						'label' => html_entity_decode( $option ),
 					);
 				}
 			}

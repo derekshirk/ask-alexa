@@ -3,10 +3,13 @@
 
 }
 
+body,
+.safari {
+	background: #1565C0 ;
+}
 body {
 	width: 100vw ;
 	height: 100vh ;
-	background-color: #1565C0 ;
 }
 
 :focus {

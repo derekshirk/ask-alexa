@@ -54,7 +54,8 @@ span.select2-container {
       padding: 0;
       min-height: 1px;
       overflow: hidden; }
-      .sidebox.layouts .header h3 .header-content {
+      .sidebox.layouts .header h3 span.header-content {
+        display: block;
         float: left;
         margin-top: 5px; }
       .sidebox.layouts .header h3 span {

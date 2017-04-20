@@ -17,15 +17,6 @@ class ACP_Editing_Model_CustomField extends ACP_Editing_Model {
 
 	/**
 	 * @param ACP_Editing_Model $editable
-	 *
-	 * @return bool
-	 */
-	public function is_active() {
-		return acp_editing()->is_custom_field_enabled();
-	}
-
-	/**
-	 * @param ACP_Editing_Model $editable
 	 * @param                   $id
 	 *
 	 * @return bool|mixed|null
@@ -52,8 +43,12 @@ class ACP_Editing_Model_CustomField extends ACP_Editing_Model {
 		update_metadata( $this->column->get_list_screen()->get_meta_type(), $id, $this->column->get_meta_key(), $value );
 	}
 
+	private function is_editing_enabled() {
+		return '1' === AC()->admin()->get_general_option( 'custom_field_editable' );
+	}
+
 	public function register_settings() {
-		if ( acp_editing()->is_custom_field_enabled() ) {
+		if ( $this->is_editing_enabled() ) {
 
 			// Settings
 			parent::register_settings();

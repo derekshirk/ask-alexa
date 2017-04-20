@@ -1,5 +1,25 @@
 == Changelog ==
 
+= 4.0.2 =
+Release Date: April 11th, 2017
+
+* [Fixed] Javascript bug for editing numeric fields
+* [Fixed] Layout switcher is now correctly placed on post screen
+* [Fixed] Filtering Csutom Field values by ranged on future / past dates has been fixed
+* [Fixed] Scripts on the listings screen are now loaded in the footer
+* [Fixed] Third party columns are now be loaded correctly
+* [Fixed] Removed plugin group for columns
+
+= 4.0.1 =
+Release Date: April 5th, 2017
+
+* [Fixed] The link_category taxonomy will only show when the Link Manager is enabled
+* [Fixed] Network Sites "View" button will now link to the correct column set
+* [Fixed] Refreshing the Network Sites screen will load the correct column set
+* [Fixed] Blog ID column is now visible for Network Sites
+* [Fixed] Filtering dropdowns cache now works correctly with external caching
+* [Fixed] Admin Columns is now compatible with WordPress version 4.5 and up
+
 = 4.0 =
 Release Date: April 4th, 2017
 

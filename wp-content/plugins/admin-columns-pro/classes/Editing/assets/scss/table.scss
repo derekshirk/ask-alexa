@@ -194,6 +194,7 @@ table.wp-list-table tbody {
 				display: inline-block;
 				position: relative;
 				padding-right: 4px;
+				word-break: break-all;
 
 				&.bg-transition {
 					/*background-color: $color-wp-yellow;

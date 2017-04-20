@@ -61,13 +61,13 @@ final class ACP_Layouts {
 	 * @return false|ACP_Layout
 	 */
 	public function get_layout_by_id( $layout_id ) {
-		$layouts = $this->get_layouts();
-
-		if ( ! isset( $layouts[ $layout_id ] ) ) {
-			return false;
+		foreach ( $this->get_layouts() as $layout ) {
+			if ( $layout->get_id() === $layout_id ) {
+				return $layout;
+			}
 		}
 
-		return $layouts[ $layout_id ];
+		return false;
 	}
 
 	/**

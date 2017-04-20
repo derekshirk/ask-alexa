@@ -36,13 +36,6 @@ class ACP_Editing_Preferences {
 		 */
 		$is_active = apply_filters( 'acp/editing/preference/is_active', $is_active, $this->key );
 
-		/**
-		 * @deprecated 4.0
-		 * @since 3.0.9
-		 */
-		$is_active = apply_filters_deprecated( 'cacie/inline_edit/active', array( $is_active ), '4.0', 'acp/editing/preference/is_active' );
-		$is_active = apply_filters_deprecated( 'cacie/inline_edit/active/storage_key=' . $this->key, array( $is_active ), '4.0', 'acp/editing/preference/is_active' );
-
 		return $is_active;
 	}
 

@@ -1,0 +1,46 @@
+.submission-success {
+	color: #fff ;
+
+	.article-content {
+		display: flex ;
+		justify-content: center ;
+		@include grid-container ;
+		
+		.article-body {
+			width: 100% ;
+			@include grid-column(12) ;
+			margin-right: 30px ;
+			padding-top: 32px ;
+
+			@include grid-media($grid-medium) {
+				width: 500px ;
+				padding-top: 64px ;	
+			}
+			
+			@include grid-media($grid-large) {
+				
+			}
+			
+
+			p {
+				font-family: $lato ;
+				font-size: 16px ;
+				line-height: 24px ;
+				margin-bottom: 16px ;
+			}
+
+			.button {
+				display: inline-block ;
+				color: #fff ;
+				text-decoration: none ;
+				font-family: $lato ;
+				border: 2px solid #fff ;
+				border-radius: 36px ;
+				margin-top: 16px ;
+				padding: 8px 24px ;
+			}
+		}
+	}
+
+
+}

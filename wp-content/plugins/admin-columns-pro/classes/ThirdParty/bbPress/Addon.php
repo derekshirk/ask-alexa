@@ -32,7 +32,7 @@ final class ACP_ThirdParty_bbPress_Addon {
 	 * @param AC_Groups $groups
 	 */
 	public function register_column_group( $groups ) {
-		$groups->register_group( 'bbpress', __( 'bbPress' ) );
+		$groups->register_group( 'bbpress', __( 'bbPress' ), 25 );
 	}
 
 	/**

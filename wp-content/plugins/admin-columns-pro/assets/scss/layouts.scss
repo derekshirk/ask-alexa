@@ -100,7 +100,8 @@ span.select2-container {
 			min-height: 1px;
 			overflow: hidden;
 
-			.header-content {
+			span.header-content {
+				display: block;
 				float: left;
 				margin-top: 5px;
 			}

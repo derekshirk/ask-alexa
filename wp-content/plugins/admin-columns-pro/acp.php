@@ -357,6 +357,10 @@ final class ACP {
 			unset( $taxonomies['post_format'] );
 		}
 
+		if ( isset( $taxonomies['link_category'] ) && ! get_option( 'link_manager_enabled' ) ) {
+			unset( $taxonomies['link_category'] );
+        }
+
 		/**
 		 * Filter the post types for which Admin Columns is active
 		 *

@@ -26,7 +26,7 @@ final class ACP_ThirdParty_RelatedPosts_Addon {
 	 * @param AC_Groups $groups
 	 */
 	public function set_groups( $groups ) {
-		$groups->register_group( 'related-posts', __( 'Related Posts', 'codepress-admin-columns' ) );
+		$groups->register_group( 'related-posts', __( 'Related Posts', 'codepress-admin-columns' ), 25 );
 	}
 
 }

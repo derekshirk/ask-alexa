@@ -1689,7 +1689,8 @@ table.wp-list-table tbody.cacie-enabled td .cacie-editable {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  padding-right: 4px; }
+  padding-right: 4px;
+  word-break: break-all; }
   table.wp-list-table tbody.cacie-enabled td .cacie-editable.bg-transition {
     /*background-color: $color-wp-yellow;
 					-webkit-transition: background-color 1400ms ease-out;

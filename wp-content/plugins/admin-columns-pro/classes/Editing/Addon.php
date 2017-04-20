@@ -125,13 +125,6 @@ class ACP_Editing_Addon {
 	}
 
 	/**
-	 * @return bool
-	 */
-	public function is_custom_field_enabled() {
-		return '1' === AC()->admin()->get_general_option( 'custom_field_editable' );
-	}
-
-	/**
 	 * Register setting for editing
 	 *
 	 * @param AC_Column|ACP_Column_EditingInterface $column

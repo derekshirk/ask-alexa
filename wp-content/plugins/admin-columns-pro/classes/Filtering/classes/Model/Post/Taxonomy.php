@@ -40,11 +40,6 @@ class ACP_Filtering_Model_Post_Taxonomy extends ACP_Filtering_Model {
 		 */
 		$args = apply_filters( 'acp/filtering/terms_args', $args );
 
-		/**
-		 * @deprecated 4.0
-		 */
-		$args = apply_filters_deprecated( 'cac/addon/filtering/taxonomy/terms_args', array( $args ), '4.0', 'acp/filtering/terms_args' );
-
 		$terms = get_terms( $taxonomy, $args );
 
 		if ( ! $terms || is_wp_error( $terms ) ) {

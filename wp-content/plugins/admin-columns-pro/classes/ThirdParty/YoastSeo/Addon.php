@@ -24,7 +24,7 @@ final class ACP_ThirdParty_YoastSeo_Addon {
 	 * @param AC_Groups $groups
 	 */
 	public function set_groups( $groups ) {
-		$groups->register_group( 'yoast-seo', __( 'Yoast SEO', 'wordpress-seo' ) );
+		$groups->register_group( 'yoast-seo', __( 'Yoast SEO', 'wordpress-seo' ), 25 );
 	}
 
 	/**

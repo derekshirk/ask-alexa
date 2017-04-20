@@ -10,3 +10,25 @@ button {
 		cursor: pointer ;
 	}
 }
+
+%button {
+	background-color: transparent ;
+	display: inline-block ;
+	border: 2px solid #fff ;
+	border-radius: 36px ;
+	padding: 11px 24px ;
+	color: #fff ;
+	text-decoration: none ;
+	text-transform: uppercase ;
+	font-weight: 600 ;
+	font-size: 12px ;
+	letter-spacing: 0.32px ;
+
+	&:hover {
+		background-color: lighten($light-blue, 8%) ;
+	}
+}
+
+.button {
+	@extend %button ;
+}

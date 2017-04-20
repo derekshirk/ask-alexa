@@ -155,7 +155,7 @@ class ACP_Filtering_Model_Meta extends ACP_Filtering_Model {
 					$key = 'future' === $value ? 'min' : 'max';
 					$args[ $key ] = $date->format( $args['date_format'] );
 
-					$this->get_filtering_vars_ranged( $vars, $args );
+					return $this->get_filtering_vars_ranged( $vars, $args );
 				}
 
 				break;

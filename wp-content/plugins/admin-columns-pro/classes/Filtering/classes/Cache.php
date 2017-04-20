@@ -64,10 +64,10 @@ class ACP_Filtering_Cache {
 
 		// external cache does not have a timer available
 		if ( wp_using_ext_object_cache() ) {
-			return false;
+			return 'external';
 		}
 
-		return max( get_option( '_transient_timeout_' . $this->cache_id ) - time(), 0 );
+		return max( get_option( '_site_transient_timeout_' . $this->cache_id ) - time(), 0 );
 	}
 
 }

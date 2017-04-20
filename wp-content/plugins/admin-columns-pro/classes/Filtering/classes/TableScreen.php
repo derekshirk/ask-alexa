@@ -11,8 +11,8 @@ class ACP_Filtering_TableScreen {
 
 	public function __construct() {
 		add_action( 'ac/table_scripts', array( $this, 'scripts' ) );
-		add_action( 'ac/admin_head', array( $this, 'add_indicator' ) );
-		add_action( 'ac/admin_head', array( $this, 'maybe_hide_default_dropdowns' ) );
+		add_action( 'ac/admin_footer', array( $this, 'add_indicator' ) );
+		add_action( 'ac/admin_footer', array( $this, 'maybe_hide_default_dropdowns' ) );
 		add_action( 'wp_ajax_acp_update_filtering_cache', array( $this, 'ajax_update_dropdown_cache' ) );
 		add_action( 'ac/table/list_screen', array( $this, 'handle_filtering' ) ); // Before sorting
 		add_action( 'ac/columns_stored', array( $this, 'clear_timeout' ) );
@@ -97,7 +97,7 @@ class ACP_Filtering_TableScreen {
 		$list_screen->set_layout_id( filter_input( INPUT_POST, 'layout' ) );
 		$cache = $this->cache( 'timeout' . $list_screen->get_storage_key() );
 
-		if ( $cache->time_left() && $this->is_cache_enabled() ) {
+		if ( $cache->get() && $this->is_cache_enabled() ) {
 			wp_send_json_error( $cache->time_left() );
 		}
 

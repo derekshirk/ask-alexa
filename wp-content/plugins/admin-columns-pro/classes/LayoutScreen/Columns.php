@@ -10,15 +10,22 @@ class ACP_LayoutScreen_Columns {
 
 	public function __construct() {
 
-		add_action( 'ac/settings/init', array( $this, 'set_layout_on_setting_screen' ) );
+	    // Init
+		add_action( 'ac/settings/list_screen', array( $this, 'set_layout_on_settings_screen' ) );
+
+		// Requests
+		add_action( 'ac/settings/handle_request', array( $this, 'handle_request' ) );
 		add_action( 'ac/restore_all_columns', array( $this, 'restore_all' ) );
-		add_action( 'ac/admin_scripts/columns', array( $this, 'admin_scripts' ) );
+
+		// HTML
 		add_action( 'ac/settings/sidebox', array( $this, 'settings' ) );
 		add_action( 'ac/settings/after_title', array( $this, 'menu' ) );
 		add_action( 'ac/settings/after_menu', array( $this, 'layout_help' ) );
+
 		add_action( 'admin_init', array( $this, 'select2_conflict_fix' ), 1 );
 		add_filter( 'ac/settings/list_screen_message_label', array( $this, 'add_layout_to_label' ), 10, 2 );
 		add_filter( 'ac/read_only_message', array( $this, 'read_only_message' ), 10, 2 );
+		add_action( 'ac/admin_scripts/columns', array( $this, 'admin_scripts' ) );
 
 		// Ajax
 		add_action( 'wp_ajax_acp_layout_get_users', array( $this, 'ajax_get_users' ) );
@@ -40,9 +47,34 @@ class ACP_LayoutScreen_Columns {
 	}
 
 	/**
+	 * @param AC_ListScreen $list_screen
+	 */
+	public function set_layout_on_settings_screen( $list_screen ) {
+
+		// Preference
+		$layout_id = $this->get_layout_preference( $list_screen->get_key() );
+
+		// User selected. Do not use filter_input, because an empty layout can also be valid.
+		if ( isset( $_GET['layout_id'] ) ) {
+			$layout_id = $_GET['layout_id'];
+		}
+
+		$layouts = ACP()->layouts( $list_screen );
+
+		// First one
+		if ( ! $layouts->exists( $layout_id ) ) {
+			$layout_id = $layouts->get_first_layout_id();
+		}
+
+		$this->set_layout_preference( $list_screen->get_key(), $layout_id );
+
+		$list_screen->set_layout_id( $layout_id );
+	}
+
+	/**
 	 * @param AC_Admin_Page_Columns $screen
 	 */
-	public function set_layout_on_setting_screen( $screen ) {
+	public function handle_request( $screen ) {
 
 		switch ( filter_input( INPUT_POST, 'acp_action' ) ) {
 
@@ -124,32 +156,6 @@ class ACP_LayoutScreen_Columns {
 
 				$screen->notice( sprintf( __( 'Column set %s succesfully deleted.', 'codepress-admin-columns' ), "<strong>\"" . esc_html( $layout->get_name() ) . "\"</strong>" ), 'updated' );
 				break;
-
-			default :
-				$list_screen = $screen->get_current_list_screen();
-
-				if ( ! $list_screen ) {
-					return;
-				}
-
-				// Preference
-				$layout_id = $this->get_layout_preference( $list_screen->get_key() );
-
-				// User selected. Do not use filter_input, because an empty layout can also be valid.
-				if ( isset( $_GET['layout_id'] ) ) {
-					$layout_id = $_GET['layout_id'];
-				}
-
-				$layouts = ACP()->layouts( $list_screen );
-
-				// First one
-				if ( ! $layouts->exists( $layout_id ) ) {
-					$layout_id = $layouts->get_first_layout_id();
-				}
-
-				$this->set_layout_preference( $list_screen->get_key(), $layout_id );
-
-				$list_screen->set_layout_id( $layout_id );
 		}
 	}
 
@@ -234,7 +240,7 @@ class ACP_LayoutScreen_Columns {
 
             <div class="header">
                 <h3>
-					<div class="header-content"><?php _e( 'Column Sets', 'codepress-admin-columns' ); ?></div>
+                    <span class="header-content"><?php _e( 'Column Sets', 'codepress-admin-columns' ); ?></span>
                     <a class="button add-new">
                         <span class="add"><?php echo esc_html( $this->get_add_button_test() ); ?></span>
                         <span class="close"><?php echo esc_html( __( 'Cancel', 'codepress-admin-columns' ) ); ?></span>
@@ -498,19 +504,16 @@ class ACP_LayoutScreen_Columns {
 	 * @param AC_ListScreen $list_screen
 	 */
 	public function menu( AC_ListScreen $list_screen ) {
-		$layouts = ACP()->layouts( $list_screen )->get_layouts();
+		$list = $this->get_display_layout_list( $list_screen );
 
-		if ( ! $layouts ) {
+		if ( ! $list ) {
 			return;
 		}
-
 		?>
         <div class="layout-selector">
             <ul class="subsubsub">
-				<?php if ( $list = $this->get_display_layout_list( $list_screen ) ) : ?>
-                    <li class="first"><?php _e( 'Column Sets', 'codepress-admin-columns' ); ?>:</li>
-					<?php echo $list; ?>
-				<?php endif; ?>
+                <li class="first"><?php _e( 'Column Sets', 'codepress-admin-columns' ); ?>:</li>
+				<?php echo $list; ?>
             </ul>
         </div>
 		<?php
@@ -593,7 +596,7 @@ class ACP_LayoutScreen_Columns {
 	}
 
 	private function instructions() {
-	    ?>
+		?>
         <a class="instructions ac-pointer" rel="layout-help" data-pos="left" data-width="305" data-noclick="1">
 			<?php _e( 'Instructions', 'codepress-admin-columns' ); ?>
         </a>

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class ACP_Column_NetworkSite_BlogID extends ACP_Column_NetworkSite_Property {
 
 	public function __construct() {
-		$this->set_type( 'column-msite_id' );
+		$this->set_type( 'column-blog_id' );
 		$this->set_label( __( 'Blog ID', 'codepress-admin-columns' ) );
 	}
 
