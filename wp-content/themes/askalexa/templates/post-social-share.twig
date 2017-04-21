@@ -1,0 +1,35 @@
+<!-- Buttons start here. Copy this ul to your document. -->
+<div class="share-this">
+
+	<h3>Please share this site.</h3>
+	<ul class="social-icons">
+		
+		<li> 
+			<a 
+				class="social-share-popup" 
+				href="https://twitter.com/intent/tweet?text={{twitterShareText}} {{post.title}} {{source}} {{post.link}}"
+				{# OnClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;" #}
+			> 
+				<i class="fa fa-twitter" aria-hidden="true"></i> 
+			</a> 
+		</li>
+		
+		<li> 
+			<a 
+				class="social-share-popup" 
+				href="https://www.facebook.com/sharer/sharer.php?u={{post.link}}">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+			</a> 
+		</li>
+		
+		<li> 
+			<a 
+				class="social-share-popup" 
+				href="http://dribbble.com/derekshirk">
+				<i class="fa fa-tumblr" aria-hidden="true"></i> 	
+			</a> 
+		</li>
+		
+	</ul>
+
+</div>

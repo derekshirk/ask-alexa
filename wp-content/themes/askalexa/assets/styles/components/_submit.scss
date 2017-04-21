@@ -37,8 +37,16 @@
 					color: lighten($light-blue, 16%) ;
 				}
 
+				input[type="submit"],
+				input[type="button"],
+				input[type="checklist"] {
+					/* Remove First */
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+				}
+				
 				input, textarea {
-					// background-color: transparent ;
 					background-color: $light-blue ;
 					outline: none ;
 					border: 2px solid rgba($light-blue, 0.25) ;
@@ -46,6 +54,16 @@
 					color: #fff ;
 					font-size: 18px ;
 					padding: 16px ;
+					box-shadow: none ;
+					 text-shadow: 0px 0px 0px #fff;
+					-webkit-text-fill-color: transparent;
+				}
+
+				input::-webkit-input-placeholder,
+				textarea::-webkit-input-placeholder {
+					color: #fff ;
+					text-shadow: 0px 0px 0px #fff;
+					-webkit-text-fill-color: #fff ;
 				}
 
 				.twitter-username {
@@ -68,8 +86,13 @@
 					}
 				}
 
+
+
 				.checkbox-wrap {
 					flex-wrap: nowrap ;
+					.nf-field-label {
+						padding-left: 30px ;
+					}
 				}
 				.subscribe-opt-in {
 					padding: 16px 0 ;

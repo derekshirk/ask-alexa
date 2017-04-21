@@ -23,7 +23,8 @@
     "bourbon": "^4.3.4",
     "normalize-css": "^6.0.0",
     "reset-scss": "^2.0.2",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "components-font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "neat": "^2.0.0"

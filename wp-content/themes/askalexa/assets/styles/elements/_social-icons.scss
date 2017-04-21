@@ -1,0 +1,101 @@
+/* This file is part of the WP Theme and Portfolio of derek shirk
+ * <https://derekshirk.com>
+ * (c) derek shirk
+ * [license] Don't be a jerk. Otherwise, learn, share, profit and so on. 
+
+/* ---------------------------------------------------------- */
+/*  Social Icons
+/* ---------------------------------------------------------- */
+
+
+
+
+.social-icons {
+	display: flex ;
+	align-items: center ;
+	margin: 0 ;
+	padding: 0 ;
+	list-style: none ;
+	
+	li {
+		margin: 0 ;
+		padding: 0 8px ;
+		font-size: 26px ;
+
+		a {
+			color: #fff ;
+			text-decoration: none ;
+		}
+
+		.fa {
+			width: 48px ;
+			height: 48px ;
+			color: #fff;
+			border: 2px solid #fff;
+			border-radius: 36px;
+			padding: 10px 11px;
+			box-sizing: border-box;
+			font-size: 22px;
+			background: transparent ;
+			transition: background ease .5s ;
+			display: flex ;
+			justify-content: center ;
+			align-items: center ;
+			
+			&:hover {
+				background: $light-blue ;
+				transition: background ease .5s ;
+			}
+		}
+
+		// .fa-twitter {
+		// 	transition: color .3s ease-in-out ;
+		// 	&:hover {
+		// 		// color: $twitterColor ;
+		// 		color: #fff ;
+		// 		transition: color .3s ease-in-out ;
+		// 		cursor: pointer ;
+		// 	}
+		// }
+
+		// .fa-github-alt {
+		// 	transition: color .3s ease-in-out ;
+		// 	&:hover {
+		// 		color: #fff ;
+		// 		transition: color .3s ease-in-out ;
+		// 		cursor: pointer ;
+		// 	}
+		// }
+
+		// .fa-codepen {
+		// 	transition: color .3s ease-in-out ;
+		// 	&:hover {
+		// 		color: #fff ;
+		// 		// color: $codepenColor ;
+		// 		transition: color .3s ease-in-out ;
+		// 		cursor: pointer ;
+		// 	}
+		// }
+
+		// .fa-instagram {
+		// 	transition: color .3s ease-in-out ;
+		// 	&:hover {
+		// 		color: #fff ;
+		// 		// color: $instagramColor ;
+		// 		transition: color .3s ease-in-out ;
+		// 		cursor: pointer ;
+		// 	}
+		// }
+
+		// .fa-dribbble {
+		// 	transition: color .3s ease-in-out ;
+		// 	&:hover {
+		// 		// color: $dribbbleColor ;
+		// 		color: #fff ;
+		// 		transition: color .3s ease-in-out ;
+		// 		cursor: pointer ;
+		// 	}
+		// }
+
+	}
+}

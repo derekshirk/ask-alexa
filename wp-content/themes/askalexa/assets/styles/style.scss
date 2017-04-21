@@ -10,7 +10,11 @@
 @import "assets/vendor/bourbon/app/assets/stylesheets/bourbon" ;
 @import "assets/vendor/neat/core/neat" ;
 @import "slick.scss" ;
-// @import "slick-theme.scss" ;
+
+
+// font-awesome
+// @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ;
+@import "vendor/font-awesome" ;
 
 @import "mixins/google-fonts" ;
 
@@ -23,6 +27,7 @@
 @import "elements/menus" ;
 @import "elements/post-rating" ;
 @import "elements/buttons" ;
+@import "elements/social-icons" ;
 
 @import "components/header" ;
 @import "components/main-carousel" ;
@@ -31,9 +36,7 @@
 @import "components/submit" ;
 @import "components/submission-success" ;
 @import "components/404" ;
-
-
-
+@import "components/footer" ;
 
 
 .content-wrapper {

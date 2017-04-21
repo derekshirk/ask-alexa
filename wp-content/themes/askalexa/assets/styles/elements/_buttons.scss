@@ -13,6 +13,7 @@ button {
 
 %button {
 	background-color: transparent ;
+	transition: background ease .5s ;
 	display: inline-block ;
 	border: 2px solid #fff ;
 	border-radius: 36px ;
@@ -26,6 +27,7 @@ button {
 
 	&:hover {
 		background-color: lighten($light-blue, 8%) ;
+		transition: background ease .5s ;
 	}
 }
 

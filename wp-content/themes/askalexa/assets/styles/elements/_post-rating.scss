@@ -1,8 +1,12 @@
 .post--rating {
 	display: flex ;
-	margin-top: 64px ;
+	margin-top: 40px ;
 	justify-content: flex-start ;
 	align-items: center ;
+
+	@include grid-media($grid-large) {
+		padding-top: 64px ;
+	}
 
 	.rate {
 		display: flex ;

@@ -1,10 +1,26 @@
 .submission-success {
 	color: #fff ;
+	height: 100% ;
+	// background: cyan ;
+
+	.content-wrapper {
+		height: 100% ;
+	}
+
+	.post-type-page {
+		height: 100% ;
+	}
 
 	.article-content {
 		display: flex ;
 		justify-content: center ;
 		@include grid-container ;
+		height: 100% ;
+		// background: yellow ;
+
+		@include grid-media($grid-medium) {
+			align-items: center ;
+		}
 		
 		.article-body {
 			width: 100% ;
@@ -38,6 +54,15 @@
 				border-radius: 36px ;
 				margin-top: 16px ;
 				padding: 8px 24px ;
+			}
+		}
+
+		.share-this {
+			margin-top: 64px ;
+
+			h3 {
+				font-size: 24px ;
+				margin-bottom: 16px ;
 			}
 		}
 	}
