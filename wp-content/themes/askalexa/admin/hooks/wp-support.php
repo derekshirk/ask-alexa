@@ -1,5 +1,14 @@
 <?php 
 
+/* ————————————————————————— */
+/*  Add Favicon to wp-admin
+/* ————————————————————————— */
+
+function favicon(){
+	echo '<link rel="shortcut icon" href="',get_template_directory_uri(),'/favicon.ico" />',"\n";
+}
+add_action('admin_head','favicon');
+
 /* ---------------------------------------------------------- */
 /* Enable SVG Uploading
 /* ---------------------------------------------------------- */

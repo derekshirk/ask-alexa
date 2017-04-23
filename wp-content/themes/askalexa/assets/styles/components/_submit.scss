@@ -1,5 +1,9 @@
 .submit {
 
+	.share-this {
+		display: none ;
+	}
+
 	.content-wrapper {
 		@include grid-container;
 		display: flex ;

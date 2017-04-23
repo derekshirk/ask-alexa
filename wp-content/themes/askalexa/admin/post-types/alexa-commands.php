@@ -41,6 +41,7 @@ function ds_create_cpt_alexa_commands() {
 		'hierarchical' 			=> true,
 		'has_archive' 			=> false,
 		'show_in_menu' 		=> true,
+		'taxonomies' 			=> array('post_tag'),
 		'rewrite' 				=> array(
 									'slug' 	=> 'ask-alexa'
 								),
