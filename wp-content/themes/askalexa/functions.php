@@ -36,18 +36,18 @@ class StarterSite extends TimberSite {
 	}
 
 	function add_to_context( $context ) {
-		$context['foo'] = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
+		// $context['foo'] = 'bar';
+		// $context['stuff'] = 'I am a value set in your functions.php file';
+		// $context['notes'] = 'These values are available everytime you call Timber::get_context();';
 		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 		return $context;
 	}
 
-	function myfoo( $text ) {
-		$text .= ' bar!';
-		return $text;
-	}
+	// function myfoo( $text ) {
+	// 	$text .= ' bar!';
+	// 	return $text;
+	// }
 
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own functions to twig */
@@ -70,13 +70,15 @@ include('admin/hooks/wp-support.php') ;
 // Body Class
 include('admin/hooks/body-class.php') ;
 
-add_action( 'wp_enqueue_scripts', 'mytheme_scripts' );
 /**
  * Enqueue Dashicons style for frontend use
  */
-function mytheme_scripts() {
-  wp_enqueue_style( 'dashicons' );
-}
+
+// add_action( 'wp_enqueue_scripts', 'mytheme_scripts' );
+
+// function mytheme_scripts() {
+// 	wp_enqueue_style( 'dashicons' );
+// }
 
 // Post Like PHP
 // add_action('my_action_with_args', 'getPostLikeLink', 10, 2);
