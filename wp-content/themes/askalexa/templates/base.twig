@@ -1,11 +1,9 @@
 {% block html_head_container %}
-
 {% include 'html-header.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
 {% endblock %}
-
 	<body class="{{body_class}}" data-template="base.twig">
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -15,7 +13,6 @@
 		ga('create', 'UA-97432170-1', 'auto');
 		ga('send', 'pageview');
 		</script>
-		
 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
@@ -28,28 +25,20 @@
 				</div>
 			{% endblock %}
 		</header>
-
 		<section id="content" role="main" class="content-wrapper">
-			{# {% if title %}<h1>{{title}}</h1>{% endif %} #}
-			
 			<div class="wrapper {{sidebar_class}}">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
 			</div>
-
 			{% if sidebar %}
 				<aside class="layout-sidebar">
 					{{sidebar}}
 				</aside>
 			{% endif %}
-			
 		</section>
-
 		{% block footer %}
-			<footer id="footer">
-				{% include 'footer.twig' %}
-			</footer>
+			{% include 'footer.twig' %}
 			{{ function('wp_footer') }}
 		{% endblock %}
 	</body>

@@ -7,7 +7,6 @@
 /* ---------------------------------------------------------- *
 /* Template Name: Alexa Commands
 /* ---------------------------------------------------------- */
-
 $context = Timber::get_context();
 $args = array( 
 	'post_type' 			=> 'alexa-commands',
@@ -16,15 +15,10 @@ $args = array(
 	'posts_per_page' 	=> -1
 ) ;
 $context['posts'] = Timber::get_posts($args) ;
-
 $post = new TimberPost();
 $context['post'] = $post;
-
 $context['count'] = wp_count_posts();
-$context['twitterShareText']      = "Check out this post" ;
-$context['source']                        = "via derekshirk.com" ;
-
-// $love = get_post_meta( get_the_ID(), 'post_love', true );
-// $love = ( empty( $love ) ) ? 0 : $love;
-
+$context['twitterShareText']      = "Fun Things to Ask Alexa " ;
+$context['source']                        = "via https://derekshirk.com " ;
+$context['socialSharePoster']   = "https://funthingstoaskalexa.com/wp-content/uploads/2017/04/fun-things-to-ask-alexa.png " ;
 Timber::render( array( 'page-front.twig', 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
