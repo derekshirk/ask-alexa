@@ -28,14 +28,6 @@ gulp.task('serve', ['sass'], function() {
 	gulp.watch("templates/*.twig").on('change', browserSync.reload) ;
 });
 
-
-// Lint Task
-gulp.task('lint', function() {
-	return gulp.src('js/*.js')
-		.pipe(jshint())
-		.pipe(jshint.reporter('default'));
-});
-
 // Compile Our Sass
 gulp.task('sass', function() {
 	return gulp.src('assets/styles/*.scss')
@@ -53,9 +45,16 @@ gulp.task('sass', function() {
 	.pipe(browserSync.stream());
 });
 
+// Lint Task
+gulp.task('lint', function() {
+	return gulp.src('assets/scripts/*.js')
+		.pipe(jshint())
+		.pipe(jshint.reporter('default'));
+});
+
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-	return gulp.src('js/*.js')
+	return gulp.src('assets/scripts/*.js')
 		.pipe(concat('all.js'))
 		.pipe(gulp.dest('dist'))
 		.pipe(rename('all.min.js'))

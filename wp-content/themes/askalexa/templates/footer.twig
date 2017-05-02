@@ -1,12 +1,14 @@
-{# Copyright {{"now"|date('Y')}} #}
 <footer id="footer" class="footer">
 	<div class="footer-container">
 		{% include "post-social-share.twig" %}
 	</div>
 	<div class="footer-copyright">
-		<p>made by <a href="https://derekshirk.com">derek shirk</a>.</p>
+		<p>made by <a href="https://derekshirk.com">derek shirk</a>. Copyright {{"now"|date('Y')}}</p>
 	</div>
+
+	{# {{function('wp_footer')}} #}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 	<script type="text/javascript" src="{{site.theme.link}}/assets/scripts/custom-slick.js"></script>
+	
 </footer>

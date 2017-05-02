@@ -70,28 +70,23 @@ include('admin/hooks/wp-support.php') ;
 // Body Class
 include('admin/hooks/body-class.php') ;
 
-/**
- * Enqueue Dashicons style for frontend use
- */
-
-// add_action( 'wp_enqueue_scripts', 'mytheme_scripts' );
-
-// function mytheme_scripts() {
-// 	wp_enqueue_style( 'dashicons' );
-// }
-
-// Post Like PHP
-// add_action('my_action_with_args', 'getPostLikeLink', 10, 2);
-// include('admin/ratings/post-like.php') ;
-
 // Post Like Ajax
 // add_action('wp_ajax_nopriv_post-like', 'post_like');
 // add_action('wp_ajax_post-like', 'post_like');
 
-// wp_enqueue_script('like_post', get_template_directory_uri().'/assets/scripts/post-like.js', array('jquery'), '1.0', true );
+// function my_scripts_method() {
+// 	wp_register_script('like_post', get_template_directory_uri().'/assets/scripts/post-like.js', array('jquery'), '', true );
+// 	wp_enqueue_script( 'like_post' );
+// }
+// add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
+
 // wp_localize_script('like_post', 'ajax_var', array(
 //     'url' => admin_url('admin-ajax.php'),
 //     'nonce' => wp_create_nonce('ajax-nonce')
 // ));
+
+
+
 
 new StarterSite();
