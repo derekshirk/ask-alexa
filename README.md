@@ -1,6 +1,6 @@
 # Fun Things To Ask Alexa
 
-![fun things to ask alexa](https://raw.githubusercontent.com/derekshirk/codepen-template-assets/master/img/askalexa/askalexa-home-poster.png"funthingstoaskalexa.com homepage screenshot")  
+![fun things to ask alexa](https://raw.githubusercontent.com/derekshirk/codepen-template-assets/master/img/askalexa/askalexa-home-poster.png" funthingstoaskalexa.com homepage screenshot")  
 
 https://funthingstoaskalexa.com
 
